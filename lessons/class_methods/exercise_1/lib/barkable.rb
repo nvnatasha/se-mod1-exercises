@@ -7,3 +7,5 @@ module Barkable
   end
 
 end
+
+puts bark (Zuma)
