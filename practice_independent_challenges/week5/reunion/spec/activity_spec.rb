@@ -21,5 +21,25 @@ RSpect.descibe Activity do
         expect(@activity.participants).to eq({})
     end
 
+    it 'can add participants' do
+        @activity.add_participant("Maria", 20)
+
+        expect(@activity.participants).to eq({"Maria" => 20})
+    end
+
+    it 'can return activity cost' do
+
+        expect(@activity.total_cost).to eq(20)
+    end
+
+    it 'can add more participants' do
+        @activity.add_participant("Luther", 40)
+
+        expect(@activity.participants).to eq({"Maria" => 20, "Luther" => 40})
+    end
+
+    it 'can return the new activity total cost' do
+
+        expect(@activity.total_cost).to eq(60)
 
 end
