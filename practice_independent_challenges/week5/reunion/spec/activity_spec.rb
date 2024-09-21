@@ -1,9 +1,9 @@
 require 'rspec'
 require './lib/activity'
 
-RSpect.descibe Activity do
+RSpec.describe Activity do
     before(:each) do
-        activity = Activity.new("Brunch")
+        @activity = Activity.new("Brunch")
     end
 
     it 'is an instance of activity' do
@@ -41,5 +41,5 @@ RSpect.descibe Activity do
     it 'can return the new activity total cost' do
 
         expect(@activity.total_cost).to eq(60)
-
+    end
 end
