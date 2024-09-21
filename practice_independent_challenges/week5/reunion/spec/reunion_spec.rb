@@ -11,3 +11,13 @@ RSpec.describe Reunion do
 
         expect(@reunion).to be_an_instance_of(Activity)
     end
+
+    it 'can return a name' do
+
+        expect(@reunion.name).to eq("1406 BE")
+    end
+
+    it 'starts with an empty array of activities' do
+
+        expect(@reunion.actvities).to eq([])
+    end
