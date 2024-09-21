@@ -21,3 +21,10 @@ RSpec.describe Reunion do
 
         expect(@reunion.actvities).to eq([])
     end
+
+    it 'can add activities' do
+        activity_1 = Activity.new("Brunch")
+        reunion.add_activity(activity_1)
+
+        expect(@reunion.activities).to include(activity_1)
+    end
