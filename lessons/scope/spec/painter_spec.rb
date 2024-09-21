@@ -1,6 +1,7 @@
 require './lib/painter'
 require './lib/paint'
 
+include painter 
 describe Painter do
   it 'test_it_exists' do
     the_painters_name = "Bob Ross"

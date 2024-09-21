@@ -2,16 +2,16 @@ require 'pry'
 #### GLOBAL SCOPE
 ## Example 1
 
-# x = 10
-# puts x
-# puts y
+#x = 10
+#puts x
+#puts y
 
 ## Example 2
 
 # x = 10
-# puts x
-# puts y
-# y = 20
+#  puts x
+#  puts y
+#  y = 20
 
 ## Example 3
 
