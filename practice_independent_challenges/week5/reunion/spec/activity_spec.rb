@@ -1,6 +1,6 @@
 require 'rspec'
 require './lib/activity'
-require 'pry'
+
 
 RSpec.describe Activity do
     before(:each) do
