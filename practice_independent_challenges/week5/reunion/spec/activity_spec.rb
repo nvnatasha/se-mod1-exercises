@@ -1,5 +1,6 @@
 require 'rspec'
 require './lib/activity'
+require 'pry'
 
 RSpec.describe Activity do
     before(:each) do
@@ -23,22 +24,27 @@ RSpec.describe Activity do
 
     it 'can add participants' do
         @activity.add_participant("Maria", 20)
-
+        
         expect(@activity.participants).to eq({"Maria" => 20})
+        
     end
 
-    it 'can return activity cost' do
+   it 'can return activity cost' do
+        @activity.add_participant("Maria", 20)
 
         expect(@activity.total_cost).to eq(20)
     end
 
     it 'can add more participants' do
+        @activity.add_participant("Maria", 20)
         @activity.add_participant("Luther", 40)
 
         expect(@activity.participants).to eq({"Maria" => 20, "Luther" => 40})
     end
 
     it 'can return the new activity total cost' do
+        @activity.add_participant("Maria", 20)
+        @activity.add_participant("Luther", 40)
 
         expect(@activity.total_cost).to eq(60)
     end
